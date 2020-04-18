@@ -1,4 +1,4 @@
-package com.iotknowyou.Stack.ArrayStack;
+package com.iotknowyou.Stack.CalculatorBaseStack;
 
 /**
  * @author LiuRongHua
@@ -80,4 +80,61 @@ public class ArrayStack {
 
     }
 
+
+
+    /**
+     * 对运算符 符号进行比较，返回运算符的优先级
+     * version_1.0  假定  运算符只有  + - * /
+     *
+     * @param oper  运算符
+     * @return
+     */
+    public int priority(char oper){
+        if(oper == '*' || oper == '/'){
+            return 1;
+        }else if(oper == '+' || oper == '-') {
+            return 0;
+        }else {
+            return -1; // 不是 + - * / ，直接返回 -1
+        }
+    }
+
+
+    /**
+     * 判断是不是一个 运算符
+     * 假定  运算符只有  + - * /
+     * @param val
+     * @return
+     */
+    public boolean isOper(char val){
+        return val == '*' || val == '/' || val == '+' || val == '-' ;
+    }
+
+    /**
+     * 计算方法
+     * @param num_1
+     * @param num_2
+     * @param oper
+     * @return
+     */
+    public int cal(int num_1 , int num_2 , char oper){
+        int res = 0;
+        switch (oper){
+            case '+':
+                res = num_1 + num_2;
+                break;
+            case '-':
+                res = num_1 - num_2;
+                break;
+            case '*':
+                res = num_1 * num_2;
+                break;
+            case '/':
+                res = num_1 / num_2;
+                break;
+            default:
+                break;
+        }
+        return res;
+    }
 }

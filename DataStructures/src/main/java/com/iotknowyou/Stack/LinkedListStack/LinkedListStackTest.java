@@ -17,7 +17,7 @@ public class LinkedListStackTest {
             s.push(String.valueOf(i));
             System.out.println("size: " + s.size());
         }
-        // 使用for增强的方式遍历，底层使用的 迭代器
+        // 使用for增强的方式遍历，底层使用的是 迭代器
         for (String per : s){
             System.out.println(per);
         }
