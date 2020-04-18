@@ -157,8 +157,8 @@ public class CalculatorBaseStack {
      *      2、在数值 入栈的程序代码中，添加对 KeepNum的判断， 为true时，numStock.pop 和当前的 ch 拼接后，再入栈
      *    总结：
      *      1、通过实践发现，当使用 Integer.valueOf("00") 入栈中的数值是 0 ，会使得  10000... 的数值 最后入栈中的数值是 10
-     *      2、解决上述的问题，引入的 zeroCount 的变量统计“00”出现的次数， if("00".equals(tempNUm)){zeroCount ++ ;}
-     *         入栈时使用 Integer.valueOf(tempNUm)*Math.pow(10,zeroCount)) 以保证数值的大小
+     *      2、解决上述的问题，引入的 zeroCount 的变量统计拼接数值的次数， 每拼接一次，都增加一阶
+     *         入栈时使用 Integer.valueOf(tempNUm)*Math.pow(10,zeroCount)) + pop  以保证数值的大小
      *      3、operStack.priority(ch) <= operStack.priority((char)operStack.peek()) 中的等号应该去掉 ，
      *      以保证相同的优先级的计算都先入栈 ， 高优先级的先计算完再入栈
      *
@@ -250,16 +250,10 @@ public class CalculatorBaseStack {
             } else {
                 // 如果是数字,判断 KeepNum 值，如果为真时，需要拼接字符串
                 if(KeepNum){
-                    /**
-                     *  当输入的数值为 1000.... 时，存入栈中的数是 10
-                     *  需要特殊处理
-                     */
-                    String pop = String.valueOf(numStack.pop()) ;
-                    tempNUm =""+ch+pop;
-                    if("00".equals(tempNUm)){
-                        zeroCount ++ ;
-                    }
-                    numStack.push((int) (Integer.valueOf(tempNUm)*Math.pow(10,zeroCount)));
+                    zeroCount ++ ; // 每拼接一数值，则数值都增加一阶 10 100 1000  10000
+                    int pop = numStack.pop() ;
+                    tempNUm = "" + ch ;
+                    numStack.push((int) (Integer.valueOf(tempNUm)*Math.pow(10,zeroCount)) + pop);
                 }else {
                     //清空之前的数据
                     zeroCount=0;
