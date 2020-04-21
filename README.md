@@ -14,8 +14,12 @@
   *  LinkedListStack
 
 ## Algorithm
-### 1. CalculatorBaseStack 
-    使用Stack实现的简单计算器
+### 1. Recursion 
+    递归算法、回溯算法
+### 2. Sort
+    冒泡排序、选择排序、直接插入排序、希尔排序 
+### 3. Stack
+    波兰表达、中缀表达式、逆波兰表达式之间的转换
 
 
 
