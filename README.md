@@ -12,6 +12,8 @@
 ###  4. Stack
   *  ArrayStack
   *  LinkedListStack
+###  5. HashTable
+  *  HashTable
 
 ## Algorithm
 ### 1. Recursion 
