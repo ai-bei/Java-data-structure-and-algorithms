@@ -70,7 +70,7 @@ public class FindWay {
             throw new RuntimeException("输入的row = "+row +", 大于最大值"+mapRow);
         }
         if(column > mapColumn){
-            throw new RuntimeException("输入的row = "+ column +", 大于最大值"+mapColumn);
+            throw new RuntimeException("输入的column = "+ column +", 大于最大值"+mapColumn);
         }
         map[row][column] = mark;
     }

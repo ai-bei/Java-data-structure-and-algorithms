@@ -14,6 +14,8 @@
   *  LinkedListStack
 ###  5. HashTable
   *  HashTable
+###  6. Tree
+  *  BinaryTree 
 
 ## Algorithm
 ### 1. Recursion 
