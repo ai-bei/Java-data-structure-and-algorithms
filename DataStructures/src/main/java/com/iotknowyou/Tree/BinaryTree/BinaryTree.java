@@ -46,4 +46,46 @@ public class BinaryTree<E> {
         }
     }
 
+
+    //前序遍历
+    public Node<E> preOrderSearch(Node<E> node) {
+        if(root != null) {
+            return root.preOrderSearch(node);
+        } else {
+            return null;
+        }
+    }
+    //中序遍历
+    public Node<E> infixOrderSearch(Node<E> node) {
+        if(root != null) {
+            return root.infixOrderSearch(node);
+        }else {
+            return null;
+        }
+    }
+    //后序遍历
+    public Node<E> postOrderSearch(Node<E> node) {
+        if(root != null) {
+            return this.root.postOrderSearch(node);
+        }else {
+            return null;
+        }
+    }
+
+    //删除结点
+    public void delNode(Node<E> node) {
+        if(root != null) {
+            //如果只有一个root结点, 这里立即判断root是不是就是要删除结点
+            if(root.getData() == node.getData()) {
+                root = null;
+            } else {
+                //递归删除
+                root.delNode(node);
+            }
+        }else{
+            System.out.println("空树，不能删除~");
+        }
+    }
+
+
 }

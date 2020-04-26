@@ -15,7 +15,17 @@
 ###  5. HashTable
   *  HashTable
 ###  6. Tree
-  *  BinaryTree 
+  *  BinaryTree  
+    > 前序遍历、中序遍历、后续遍历\
+    > 前序遍历查询、中序遍历查询、后续遍历查询\
+    > 二叉树节点删除
+  *  ArrBinaryTree  
+    > 顺序存储二叉树 \
+    > 前序遍历、中序遍历、后续遍历
+    
+   
+    
+
 
 ## Algorithm
 ### 1. Recursion 
