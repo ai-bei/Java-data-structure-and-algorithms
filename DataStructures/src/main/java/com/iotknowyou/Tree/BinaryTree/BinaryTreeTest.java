@@ -88,4 +88,34 @@ public class BinaryTreeTest {
         System.out.println("-----------------------------");
 
     }
+
+
+    @Test
+    public void test2(){
+        BinaryTree binaryTree = new BinaryTree();
+        Node<User> root = new Node<>(new User( 1,"liu"));
+        Node<User> node1 = new Node<>(new User(3,"liu"));
+        Node<User> node2 = new Node<>(new User(6,"liu"));
+        Node<User> node3 = new Node<>(new User(8,"liu"));
+        Node<User> node4 = new Node<>(new User(10,"liu"));
+        Node<User> node5 = new Node<>(new User(14,"liu"));
+
+
+
+        root.setLeft(node1);
+        root.setRight(node2);
+        node1.setLeft(node3);
+        node1.setRight(node4);
+        node2.setLeft(node5);
+        binaryTree.setRoot(root);
+
+        System.out.println("前序遍历"); //
+        binaryTree.preOrder();
+        System.out.println("中序遍历");
+        binaryTree.infixOrder(); //
+        System.out.println("后序遍历");
+        binaryTree.postOrder(); //
+        System.out.println("-----------------------------");
+
+    }
 }
