@@ -27,9 +27,10 @@
     > 前序线索化二叉树、中序线索化二叉树、后续线索化二叉树 \
     > 前序线索化二叉树遍历、中序线索化二叉树遍历、后续线索化二叉树遍历 \
     > 通过数组 创建 完全二叉树    
-  *  ThreadedBinaryTree  
+  *  HuffmanTree  
     > 赫夫曼树创建、遍历   
-    
+  *  BinarySortTree  
+    > 二叉排序树，实现高效的添加、查询、删除 等操作     
 
 ## Algorithm
 ### 1. Recursion 
