@@ -17,7 +17,8 @@ public class bubbleSort {
         bubblesortOne(arr);
         System.out.println("-------------------------------------");
         //需要排序的数组
-        int  arrTwo[] = {3,9,-1,10,-2};
+//        int  arrTwo[] = {3,9,-1,10,-2};
+        int  arrTwo[] = {2,1,1,3,4};
         bubblesortTwo(arrTwo);
 
 

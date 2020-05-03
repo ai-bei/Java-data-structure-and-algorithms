@@ -30,7 +30,9 @@
   *  HuffmanTree  
     > 赫夫曼树创建、遍历   
   *  BinarySortTree  
-    > 二叉排序树，实现高效的添加、查询、删除 等操作     
+    > 二叉排序树，实现高效的添加、查询、删除 等操作  
+  *  AVLTree  
+    > 平衡二叉树，节点删除、节点添加、节点遍历等操作    
 
 ## Algorithm
 ### 1. Recursion 
